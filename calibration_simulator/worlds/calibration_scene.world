@@ -78,10 +78,10 @@
       <pose frame=''>2.06467 -1.77435 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>9240 181000000</sim_time>
-      <real_time>112 701969033</real_time>
-      <wall_time>1485440097 99891907</wall_time>
-      <iterations>81986</iterations>
+      <sim_time>9562 688000000</sim_time>
+      <real_time>274 191573692</real_time>
+      <wall_time>1485449672 73601845</wall_time>
+      <iterations>243253</iterations>
       <model name='asphalt_plane'>
         <pose frame=''>0 0 -0.05 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -138,7 +138,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-6.18933 0.465822 2.28005 0 0.310204 -0.011982</pose>
+        <pose frame=''>-4.18999 1.82354 4.87109 0 0.570204 -0.227978</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -403,7 +403,7 @@
         <sensor name='stereo_camera' type='multicamera'>
           <update_rate>10</update_rate>
           <camera name='left'>
-            <horizontal_fov>0.698132</horizontal_fov>
+            <horizontal_fov>0.750492</horizontal_fov>
             <image>
               <width>1280</width>
               <height>960</height>
@@ -421,7 +421,7 @@
           </camera>
           <camera name='right'>
             <pose frame=''>0 -0.12 0 0 -0 0</pose>
-            <horizontal_fov>0.698132</horizontal_fov>
+            <horizontal_fov>0.750492</horizontal_fov>
             <image>
               <width>1280</width>
               <height>960</height>
@@ -443,8 +443,8 @@
             <cameraName>stereo_camera/</cameraName>
             <imageTopicName>image_rect_color</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-            <frameName>left</frameName>
-            <hackBaseline>0.07</hackBaseline>
+            <frameName>stereo_camera</frameName>
+            <hackBaseline>0.12</hackBaseline>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
             <distortionK3>0.0</distortionK3>
