@@ -73,7 +73,7 @@
         <cameraName>stereo_camera/</cameraName>
         <imageTopicName>image_rect_color</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>left</frameName>
+        <frameName>stereo_camera</frameName>
         <!--<rightFrameName>right_camera_optical_frame</rightFrameName>-->
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>0.0</distortionK1>
