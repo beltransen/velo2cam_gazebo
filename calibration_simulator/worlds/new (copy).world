@@ -78,10 +78,10 @@
       <pose frame=''>2.06467 -1.77435 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>10649 630000000</sim_time>
-      <real_time>1116 97000873</real_time>
-      <wall_time>1485509236 524383082</wall_time>
-      <iterations>1086942</iterations>
+      <sim_time>11682 186000000</sim_time>
+      <real_time>2328 364048585</real_time>
+      <wall_time>1485518121 364954509</wall_time>
+      <iterations>2119498</iterations>
       <model name='asphalt_plane'>
         <pose frame=''>0 0 -0.05 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -138,7 +138,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-0.26474 0.038194 1.55499 0 -0.089796 -0.099972</pose>
+        <pose frame=''>-1.12159 0.189718 1.95722 0 0.166204 -0.499982</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -331,9 +331,9 @@
       </link>
     </model>
     <model name='velodyne-VLP16_0'>
-      <pose frame=''>-2 2 1 0 -0 0</pose>
+      <pose frame=''>0 0 1 0 0 0</pose>
       <link name='base_footprint'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 0 0</pose>
         <inertial>
           <pose frame=''>-0.015686 0.001961 0.058213 0 -0 0</pose>
           <mass>10.2</mass>
@@ -450,7 +450,7 @@
             <gaussianNoise>0.008</gaussianNoise>
             <robotNamespace>/</robotNamespace>
           </plugin>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </sensor>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
