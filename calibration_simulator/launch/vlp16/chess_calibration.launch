@@ -6,7 +6,7 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="verbose" default="true"/>
-  <arg name="world_name" default="$(find calibration_simulator)/worlds/hdl32/hdl32.world"/> <!-- Note: if relative path used, the 'world_name' is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+  <arg name="world_name" default="$(find calibration_simulator)/worlds/vlp16/realistic/chess.world"/> <!-- Note: if relative path used, the 'world_name' is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
 
   <!-- Start gazebo and load the world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
@@ -18,4 +18,9 @@
     <arg name="verbose" value="$(arg verbose)"/>
     <arg name="world_name" value="$(arg world_name)"/>
   </include>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+
 </launch>

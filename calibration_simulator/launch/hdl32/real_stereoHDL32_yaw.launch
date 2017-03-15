@@ -6,7 +6,7 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="verbose" default="true"/>
-  <arg name="world_name" default="$(find calibration_simulator)/worlds/hdl32/hdl32.world"/> <!-- Note: if relative path used, the 'world_name' is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+  <arg name="world_name" default="$(find calibration_simulator)/worlds/hdl32/realistic/yaw.world"/> <!-- Note: if relative path used, the 'world_name' is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
 
   <!-- Start gazebo and load the world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
