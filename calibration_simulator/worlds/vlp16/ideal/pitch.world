@@ -78,10 +78,10 @@
       <pose frame=''>2.06467 -1.77435 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>11997 603000000</sim_time>
-      <real_time>339 600705053</real_time>
-      <wall_time>1487923817 639617218</wall_time>
-      <iterations>315417</iterations>
+      <sim_time>12419 670000000</sim_time>
+      <real_time>442 527906852</real_time>
+      <wall_time>1491386300 719427660</wall_time>
+      <iterations>422067</iterations>
       <model name='asphalt_plane'>
         <pose frame=''>0 0 -0.05 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -93,10 +93,10 @@
         </link>
       </model>
       <model name='bumblebee_xb3'>
-        <pose frame=''>0 0 1.5 0 -0 0</pose>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0 0 1.5 0 -0 0</pose>
+          <pose frame=''>0 0 1.4 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -123,10 +123,10 @@
         </link>
       </model>
       <model name='velodyne-VLP16_0'>
-        <pose frame=''>0 0 1.5 0 0.1 0</pose>
+        <pose frame=''>0 0 1.4 0 0.1 0</pose>
         <scale>1 1 1</scale>
         <link name='base_footprint'>
-          <pose frame=''>0 0 1.5 0 0.1 0</pose>
+          <pose frame=''>0 0 1.4 0 0.1 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -269,7 +269,7 @@
             <noise>
               <type>gaussian</type>
               <mean>0</mean>
-              <stddev>0.0</stddev>
+              <stddev>0</stddev>
             </noise>
           </camera>
           <camera name='right'>
@@ -287,7 +287,7 @@
             <noise>
               <type>gaussian</type>
               <mean>0</mean>
-              <stddev>0.0</stddev>
+              <stddev>0</stddev>
             </noise>
           </camera>
           <plugin name='stereo_camera_controller' filename='libgazebo_ros_multicamera.so'>
