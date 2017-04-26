@@ -1,6 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
+ *  Modification Copyright (c) 2016 - 2017, Jorge Beltran de la Cita (Line 372)
  *  Copyright (c) 2015-2016, Dataspeed Inc.
  *  All rights reserved.
  *
