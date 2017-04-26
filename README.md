@@ -24,7 +24,7 @@ Calibration targets:
 
 * Calibration pattern with wood (maple) texture
 * Calibration pattern with chessboard texture
-* Chessboard planes for Geiger et al. calibration comparison
+* Chessboard planes for recreating worlds required to test the KIT Calibration Toolbox (http://www.cvlibs.net/software/calibration/) 
 
 # Gazebo plugins (compilation of the pkg installs the lib in the proper directory)
 * Velodyne plugin providing PointCloud2 with same structure as driver (x, y, z, intensity, ring) and simulated Gaussian noise. (Code from https://bitbucket.org/DataspeedInc/velodyne_simulator, although minor patch for vertical resolution issue is included)
