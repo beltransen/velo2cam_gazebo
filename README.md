@@ -1,6 +1,7 @@
-# Calibration Simulator
-Repository including Gazebo models, plugins and worlds to test calibration algorithms for Lidar and camera sensors.
-Currently supported sensors:
+# velo2cam_gazebo
+Repository including Gazebo models, plugins and worlds to test algorithms for extrinsic calibration of lidar-camera pairs. Package developed at Intelligent Systems Laboratory (http://www.uc3m.es/islab), Universidad Carlos III de Madrid.
+
+# Supported sensors
 
 * Bumblebee XB3 Camera
 * Velodyne VLP-16
@@ -10,6 +11,8 @@ Currently supported sensors:
 ![gazebo screenshot](screenshots/velo2cam_calibration_setup.png)
 
 # Gazebo models (need to be moved to ~/.gazebo/models/) so that they can be inserted in Gazebo worlds
+This repository includes several sensors and calibration target models to evaluate the performance of extrinsic calibration of lidar-camera pair in the Gazebo Simulator.
+
 Sensors:
 
 * Bumblebee XB3 Camera (Left - center only)
