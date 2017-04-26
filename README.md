@@ -1,7 +1,7 @@
 # Calibration Simulator
 Repository including Gazebo models, plugins and worlds to test calibration algorithms for several sensors (Currently only Bumblebee XB3 and Velodyne VLP-16 are supported).
 
-![rviz screenshot](img/rviz.png)
+![gazebo screenshot](screenshots/velo2cam_calibration_setup.png)
 
 # Gazebo models (need to be moved to ~/.gazebo/models/)
 * Bumblebee XB3 Camera (Left - center only)
