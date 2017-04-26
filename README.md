@@ -17,4 +17,4 @@ Repository including Gazebo models, plugins and worlds to test calibration algor
     * Solution: User can reduce number of points in urdf
 
 # Example Gazebo Calibration Scenario
-```roslaunch calibration_simulator calibration_simulator.launch```
+```roslaunch velo2cam_gazebo velo2cam_gazebo.launch```
