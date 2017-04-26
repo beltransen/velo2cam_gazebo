@@ -9,10 +9,13 @@ Currently supported sensors:
 ![gazebo screenshot](screenshots/velo2cam_calibration_setup.png)
 
 # Gazebo models (need to be moved to ~/.gazebo/models/) so that they can be inserted in Gazebo worlds
+Sensors:
 * Bumblebee XB3 Camera (Left - center only)
 * Velodyne VLP-16 (Based on https://bitbucket.org/DataspeedInc/velodyne_simulator)
 * Velodyne HDL-32 (Based on https://bitbucket.org/DataspeedInc/velodyne_simulator)
 * Velodyne HDL-64 (Since 3D meshes are not available, those of HDL-32 model are used instead)
+
+Calibration targets:
 * Calibration pattern with wood (maple) texture
 * Calibration pattern with chessboard texture
 * Chessboard planes for Geiger et al. calibration comparison
