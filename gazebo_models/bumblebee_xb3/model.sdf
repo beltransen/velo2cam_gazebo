@@ -33,7 +33,7 @@
       <sensor type="multicamera" name="stereo_camera">
       <update_rate>10.0</update_rate>
       <camera name="left">
-        <horizontal_fov>0.698132</horizontal_fov>
+        <horizontal_fov>0.750492</horizontal_fov>
         <image>
           <width>1280</width>
           <height>960</height>
@@ -51,7 +51,7 @@
       </camera>
       <camera name="right">
         <pose>0 -0.12 0 0 0 0</pose>
-        <horizontal_fov>0.698132</horizontal_fov>
+        <horizontal_fov>0.750492</horizontal_fov>
         <image>
           <width>1280</width>
           <height>960</height>
@@ -73,9 +73,9 @@
         <cameraName>stereo_camera/</cameraName>
         <imageTopicName>image_rect_color</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>left</frameName>
+        <frameName>stereo_camera</frameName>
         <!--<rightFrameName>right_camera_optical_frame</rightFrameName>-->
-        <hackBaseline>0.07</hackBaseline>
+        <hackBaseline>0.12</hackBaseline>
         <distortionK1>0.0</distortionK1>
         <distortionK2>0.0</distortionK2>
         <distortionK3>0.0</distortionK3>

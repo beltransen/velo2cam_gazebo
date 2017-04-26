@@ -1,6 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
+ *  Modification Copyright (c) 2016 - 2017, Jorge Beltran de la Cita (Line 372)
  *  Copyright (c) 2015-2016, Dataspeed Inc.
  *  All rights reserved.
  *
@@ -368,7 +369,7 @@ void GazeboRosVelodyneLaser::putLaserData(common::Time &_updateTime)
 
       // get angles of ray to get xyz for point
       double yAngle = 0.5*(hja+hjb) * yDiff / (rayCount -1) + minAngle.Radian();
-      double pAngle = 0.5*(vja+vjb) * pDiff / (verticalRayCount -1) + verticalMinAngle.Radian();
+      double pAngle = j * pDiff / (verticalRayCount -1) + verticalMinAngle.Radian(); // 0.5*(vja+vjb)
 
       //pAngle is rotated by yAngle:
       if ((MIN_RANGE < r) && (r < MAX_RANGE)) {
