@@ -12,7 +12,7 @@ Currently supported sensors:
 * Bumblebee XB3 Camera (Left - center only)
 * Velodyne VLP-16 (Based on https://bitbucket.org/DataspeedInc/velodyne_simulator)
 * Velodyne HDL-32 (Based on https://bitbucket.org/DataspeedInc/velodyne_simulator)
-* Velodyne HDL-64 (Although 3D meshes are not available, so those of HDL-32 model are used instead)
+* Velodyne HDL-64 (Since 3D meshes are not available, those of HDL-32 model are used instead)
 * Calibration pattern with wood (maple) texture
 * Calibration pattern with chessboard texture
 * Chessboard planes for Geiger et al. calibration comparison
