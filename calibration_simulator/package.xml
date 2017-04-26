@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>calibration_simulator</name>
+  <version>1.0.0</version>
+  <description>
+    Metapackage allowing easy installation of calibration_simulator components.
+  </description>
+
+  <license>BSD</license>
+  <author>Jorge Beltran</author>
+  <maintainer email="jbeltran@ing.uc3m.es">Jorge Beltran</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>velodyne_gazebo_plugin</run_depend>
+
+<!--
+  <export>
+    <metapackage/>
+  </export>
+-->
+
+</package>
