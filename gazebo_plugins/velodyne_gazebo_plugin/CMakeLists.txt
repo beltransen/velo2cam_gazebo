@@ -4,7 +4,7 @@ project(velodyne_gazebo_plugin)
 find_package(catkin REQUIRED COMPONENTS
   tf
   gazebo_ros
-  gazebo_plugins
+  #gazebo_plugins
   roscpp
   sensor_msgs
 )
@@ -38,6 +38,7 @@ install(TARGETS gazebo_ros_velodyne_laser
         LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
 
-install(DIRECTORY include/${PROJECT_NAME}/
+install(DIRECTORY include/
         DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
+# ${PROJECT_NAME}
