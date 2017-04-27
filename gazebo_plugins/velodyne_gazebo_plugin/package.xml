@@ -8,7 +8,7 @@
 
   <license>BSD</license>
   <author>Kevin Hallenbeck</author>
-  <maintainer email="khallenbeck@dataspeedinc.com">Kevin Hallenbeck</maintainer>
+  <maintainer email="jbeltran@ing.uc3m.es">Jorge Beltran</maintainer>
   <url type="website">http://wiki.ros.org/velodyne_gazebo_plugins</url>
   <url type="repository">https://bitbucket.org/dataspeedinc/velodyne_simulator</url>
   <url type="bugtracker">https://bitbucket.org/dataspeedinc/velodyne_simulator/issues</url>
@@ -16,6 +16,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>tf</build_depend>
+  <build_depend>gazebo</build_depend>
   <build_depend>gazebo_ros</build_depend>
   <build_depend>gazebo_plugins</build_depend>
   <build_depend>roscpp</build_depend>
