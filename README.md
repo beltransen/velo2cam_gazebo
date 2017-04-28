@@ -1,4 +1,4 @@
-# velo2cam_gazebo
+# velo2cam_gazebo [![Build Status](http://build.ros.org/job/Kdev__velo2cam_gazebo__ubuntu_xenial_amd64/4/badge/icon)](http://build.ros.org/job/Kdev__velo2cam_gazebo__ubuntu_xenial_amd64/4/)
 Repository including Gazebo models, plugins and worlds to test algorithms for extrinsic calibration of lidar-camera pairs. Package developed at Intelligent Systems Laboratory (http://www.uc3m.es/islab), Universidad Carlos III de Madrid.
 
 # Supported sensors
@@ -24,7 +24,7 @@ Calibration targets:
 
 * Calibration pattern with wood (maple) texture
 * Calibration pattern with chessboard texture
-* Chessboard planes for recreating worlds required to test the KIT Calibration Toolbox (http://www.cvlibs.net/software/calibration/) 
+* Chessboard planes for recreating worlds required to test the KIT Calibration Toolbox (http://www.cvlibs.net/software/calibration/)
 
 # Gazebo plugins (compilation of the pkg installs the lib in the proper directory)
 * Velodyne plugin providing PointCloud2 with same structure as driver (x, y, z, intensity, ring) and simulated Gaussian noise. (Code from https://bitbucket.org/DataspeedInc/velodyne_simulator, although minor patch for vertical resolution issue is included)
