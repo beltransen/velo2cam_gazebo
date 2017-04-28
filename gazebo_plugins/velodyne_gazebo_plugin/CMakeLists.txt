@@ -13,7 +13,6 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES gazebo_ros_velodyne_laser
   CATKIN_DEPENDS tf gazebo_ros gazebo_plugins roscpp sensor_msgs
-  DEPENDS GAZEBO
 )
 
 include_directories(
