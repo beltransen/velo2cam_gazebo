@@ -13,6 +13,8 @@ Repository including Gazebo models, plugins and worlds to test algorithms for ex
 # Gazebo models (need to be moved to ~/.gazebo/models/) so that they can be inserted in Gazebo worlds
 This repository includes several sensors and calibration target models to evaluate the performance of extrinsic calibration of lidar-camera pair in the Gazebo Simulator.
 
+Note: The models included in this repository were designed for evaluating the LIDAR-camera calibration algorithm described in [1], whose code is provided in *https://github.com/beltransen/velo2cam_calibration*
+
 Sensors:
 
 * Bumblebee XB3 Camera (Left - center only)
@@ -36,3 +38,9 @@ Calibration targets:
 
 # Example Gazebo Calibration Scenario
 ```roslaunch velo2cam_gazebo real_stereoVLP16_trans.launch```
+
+# Citation #
+[1] *"Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups"* submitted to *International Conference on Intelligent Transportation Systems (ITSC) 2017*.
+
+For citation details, please contact Jorge Beltran (jbeltran AT ing.uc3m DOT es) or Carlos Guindel (cguindel AT ing.uc3m DOT es).
+
