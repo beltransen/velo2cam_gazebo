@@ -13,7 +13,7 @@ Repository including Gazebo models, plugins and worlds to test algorithms for ex
 # Gazebo models (need to be moved to ~/.gazebo/models/) so that they can be inserted in Gazebo worlds
 This repository includes several sensors and calibration target models to evaluate the performance of extrinsic calibration of lidar-camera pair in the Gazebo Simulator.
 
-Note: The models included in this repository were designed for evaluating the LIDAR-camera calibration algorithm described in [1], whose code is provided [here](*https://github.com/beltransen/velo2cam_calibration*).
+Note: The models included in this repository were designed for evaluating the LIDAR-camera calibration algorithm described in [1], whose code is provided [here](https://github.com/beltransen/velo2cam_calibration).
 
 Sensors:
 
