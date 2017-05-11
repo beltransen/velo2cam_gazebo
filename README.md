@@ -40,7 +40,7 @@ Calibration targets:
 ```roslaunch velo2cam_gazebo real_stereoVLP16_trans.launch```
 
 # Citation #
-[1] *"Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups"* submitted to *International Conference on Intelligent Transportation Systems (ITSC) 2017*.
+[1] Guindel, C., Beltrán, J., Martín, D. and García, F. (2017). Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups. \*
 
-For citation details, please contact Jorge Beltran (jbeltran AT ing.uc3m DOT es) or Carlos Guindel (cguindel AT ing.uc3m DOT es).
+\* Preprint submitted to *IEEE International Conference on Intelligent Transportation Systems 2017*.
 
