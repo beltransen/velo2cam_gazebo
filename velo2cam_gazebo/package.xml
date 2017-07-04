@@ -15,7 +15,7 @@
   <run_depend>velodyne_gazebo_plugin</run_depend>
 
   <export>
-    <metapackage/>
+    <!-- <metapackage/> -->
   </export>
 
 </package>
