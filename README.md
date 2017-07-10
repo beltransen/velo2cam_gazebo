@@ -42,5 +42,5 @@ Calibration targets:
 # Citation #
 [1] Guindel, C., Beltrán, J., Martín, D. and García, F. (2017). [Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups](https://arxiv.org/abs/1705.04085). arXiv:1705.04085 [cs.CV] \*
 
-\* Manuscript submitted to *IEEE International Conference on Intelligent Transportation Systems 2017*.
+\* Accepted to *IEEE International Conference on Intelligent Transportation Systems 2017*.
 
