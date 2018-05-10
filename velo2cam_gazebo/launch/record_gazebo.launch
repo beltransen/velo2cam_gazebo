@@ -1,0 +1,11 @@
+<launch>
+
+ <node pkg="rosbag" type="record" name="rosbag_record_gazebo"
+       args="/stereo_camera/left/camera_info
+	/stereo_camera/left/image_rect_color
+	/stereo_camera/right/camera_info
+	/stereo_camera/right/image_rect_color
+	/velodyne_points
+	/tf
+	/tf_static" />
+</launch>
