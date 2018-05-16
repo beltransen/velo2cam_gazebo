@@ -905,7 +905,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/home/beltran/ros_ws/src/velodyne_simulator/velodyne_description/meshes/HDL32E_base.dae</uri>
+              <uri>model://velodyne_HDL32/meshes/HDL32E_base.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -914,7 +914,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/home/beltran/ros_ws/src/velodyne_simulator/velodyne_description/meshes/HDL32E_scan.dae</uri>
+              <uri>model://velodyne_HDL32/meshes/HDL32E_scan.dae</uri>
             </mesh>
           </geometry>
           <material>
