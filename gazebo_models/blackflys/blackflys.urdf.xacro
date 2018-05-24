@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="monocular_cam">
+<xacro:include filename="/home/beltransen/.gazebo/models/blackflys/monocular_sensor.urdf.xacro"/>
+<xacro:macro name="blackflys" params="parent name hfov hz *origin *resolution">
+   <!-- Base Link -->
+    <joint name="${name}_base_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" /> 
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+    </joint>
+    
+    <link name="${name}_link">
+      <inertial>
+        <mass value="0.1"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh filename="model://blackflys/meshes/blackflys.stl" />
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh filename="model://blackflys/meshes/blackflys.dae" />
+        </geometry>
+      </visual>
+    </link>
+    <monocular_sensor name="${name}" hfov="${hfov}" hz="${hz}">
+      <xacro:insert_block name="resolution" />
+    </monocular_sensor> 
+    <gazebo reference="${name}_link">
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>	 
+</robot>
