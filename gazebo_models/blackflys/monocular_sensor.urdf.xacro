@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="monocular_sensor">
-<xacro:macro name="monocular_sensor" params="name hfov hz **resolution">
+<xacro:macro name="monocular_sensor" params="name hfov hz noise **resolution">
   <gazebo reference="${name}_link">
-    <turnGravityOff>true</turnGravityOff>
+    <static>true</static>
+    <turnGravityOff>false</turnGravityOff>
     <sensor name="zoe_narrow_link_camera" type="camera">
       <camera>
         <horizontal_fov>${hfov}</horizontal_fov>
@@ -17,7 +18,7 @@
         <noise>
           <type>gaussian</type>
           <mean>0.0</mean>
-          <stddev>0.007</stddev>
+          <stddev>${noise}</stddev>
         </noise>
       </camera>
       <always_on>1</always_on>

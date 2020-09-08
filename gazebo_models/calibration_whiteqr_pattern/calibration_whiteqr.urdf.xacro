@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="monocular_cam">
-  <xacro:include filename="$(find velo2cam_gazebo)/../gazebo_models//blackflys/monocular_sensor.urdf.xacro"/>
-  <xacro:macro name="blackflys" params="parent name hfov hz noise *origin *resolution">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="calibration_whiteqr">
+<xacro:macro name="calibration_whiteqr" params="parent name *origin">
    <!-- Base Link -->
     <joint name="${name}_base_mount_joint" type="fixed">
       <xacro:insert_block name="origin" /> 
@@ -17,21 +16,18 @@
       </inertial>
       <collision name="collision">
         <geometry>
-          <mesh filename="model://blackflys/meshes/blackflys.stl" />
+          <mesh filename="model://calibration_whiteqr_pattern/meshes/whitebig.stl" />
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
-          <mesh filename="model://blackflys/meshes/blackflys.dae" />
+          <mesh filename="model://calibration_whiteqr_pattern/meshes/whitebig.dae" />
         </geometry>
       </visual>
     </link>
-    <monocular_sensor name="${name}" hfov="${hfov}" hz="${hz}" noise="${noise}">
-      <xacro:insert_block name="resolution" />
-    </monocular_sensor> 
     <gazebo reference="${name}_link">
       <static>true</static>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
-  </xacro:macro>
+</xacro:macro>	 
 </robot>
