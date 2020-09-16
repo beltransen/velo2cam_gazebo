@@ -1,0 +1,6 @@
+<launch>
+ <arg name="bag_name" default="monocular"/>
+
+ <node pkg="rosbag" type="record" name="rosbag_record_gazebo"
+       args="/blackflys/image_raw /blackflys/camera_info -l 100 -O $(arg bag_name)" />
+</launch>

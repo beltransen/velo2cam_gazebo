@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="stereo_camera">
+  <xacro:include filename="$(find velo2cam_gazebo)/../gazebo_models/bumblebee_xb3/stereo_sensor.urdf.xacro"/>
+  <xacro:macro name="bumblebee_xb3" params="parent name baseline hfov hz noise *origin *resolution">
+   <!-- Base Link -->
+    <joint name="${name}_base_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" /> 
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+    </joint>
+    
+    <link name="${name}_link">
+      <inertial>
+        <mass value="0.1"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+      <collision name="collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.1"/>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box size="0.1 0.1 0.1"/>
+        </geometry>
+      </visual>
+    </link>
+    <stereo_sensor name="${name}" baseline="${baseline}" hfov="${hfov}" hz="${hz}" noise="${noise}">
+      <xacro:insert_block name="resolution" />
+    </stereo_sensor> 
+    <gazebo reference="${name}_link">
+      <static>true</static>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="stereo_sensor">
+<xacro:macro name="stereo_sensor" params="name baseline hfov hz noise **resolution">
+  <gazebo reference="${name}_link">
+    <static>true</static>
+    <turnGravityOff>false</turnGravityOff>
+    <sensor type="multicamera" name="stereo_camera">
+      <camera name="left">
+        <horizontal_fov>${hfov}</horizontal_fov>
+        <image>
+          <xacro:insert_block name="resolution" />
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>150</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>${noise}</stddev>
+        </noise>
+      </camera>
+      <camera name="right">
+        <pose>0 -${baseline} 0 0 0 0</pose>
+        <horizontal_fov>${hfov}</horizontal_fov>
+        <image>
+          <xacro:insert_block name="resolution" />
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>150</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>${noise}</stddev>
+        </noise>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>${hz}</update_rate>
+      <visualize>true</visualize>
+      <plugin name="stereo_camera_controller" filename="libgazebo_ros_multicamera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>${hz}</updateRate>
+        <cameraName>${name}</cameraName>
+        <imageTopicName>image_rect_color</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>${name}</frameName>
+        <hackBaseline>${baseline}</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+</xacro:macro>	
+</robot>

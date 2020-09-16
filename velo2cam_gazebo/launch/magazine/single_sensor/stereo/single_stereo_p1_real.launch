@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="false"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="true"/>
+  <arg name="world_name" default="$(find velo2cam_gazebo)/worlds/calibration_scene.world"/> <!-- Note: if relative path used, the 'world_name' is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+
+  <!-- Start gazebo and load the world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+    <arg name="world_name" value="$(arg world_name)"/>
+  </include>
+
+  <!-- Spawn calibration target position -->
+  <param name="target" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/calibration_whiteqr_pattern/calibration_whiteqr_spawn.urdf.xacro xyz:='2.0 0 2.0' rpy:='0 0 -3.141591'" />
+  <node name="spawn_target_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param target -model target" respawn="false" output="screen" />
+
+  <!-- Spawn sensor model -->
+  <param name="sensors" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/bumblebee_xb3/bumblebee_xb3_spawn.urdf.xacro xyz:='0 0 2' rpy:='0 0 0' noise:='0.007'" />
+  <node name="spawn_sensor_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param sensors -model sensors" respawn="false" output="screen" />
+</launch>

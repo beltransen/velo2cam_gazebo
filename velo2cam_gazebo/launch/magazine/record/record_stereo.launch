@@ -1,0 +1,9 @@
+<launch>
+ <arg name="bag_name" default="stereo"/>
+
+ <node pkg="rosbag" type="record" name="rosbag_record_gazebo"
+       args="/bumblebee_xb3/left/camera_info
+	/bumblebee_xb3/left/image_rect_color
+	/bumblebee_xb3/right/camera_info
+	/bumblebee_xb3/right/image_rect_color -l 100 -O $(arg bag_name)" />
+</launch>

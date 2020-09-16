@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="blackflys_spawn">
-  <xacro:include filename="$(find velo2cam_gazebo)/../gazebo_models/blackflys/blackflys.urdf.xacro"/>
+  <xacro:include filename="$(find velo2cam_gazebo)/../gazebo_models/bumblebee_xb3/bumblebee_xb3.urdf.xacro"/>
   <xacro:arg name="xyz" default="0 0 1.5" />
   <xacro:arg name="rpy" default="0 0 0" />
-  <xacro:arg name="noise" default="0.07" />
-  <xacro:arg name="hfov" default="1.57" />
+  <xacro:arg name="noise" default="0.007" />
+  <xacro:arg name="hfov" default="0.750492" />
   <xacro:arg name="hz" default="1" />
-  <xacro:arg name="cam_name" default="blackflys" />
+  <xacro:arg name="baseline" default="0.12" />
+  <xacro:arg name="cam_name" default="bumblebee_xb3" />
 
   <gazebo>
       <static>true</static>
@@ -33,11 +34,11 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   
-  <blackflys parent="base_footprint" name="$(arg cam_name)" hfov="$(arg hfov)" hz="$(arg hz)" noise="$(arg noise)">
+  <bumblebee_xb3 parent="base_footprint" name="$(arg cam_name)" baseline="$(arg baseline)" hfov="$(arg hfov)" hz="$(arg hz)" noise="$(arg noise)">
     <origin xyz="$(arg xyz)" rpy="$(arg rpy)"/>
     <resolution>
-          <width>2048</width>
-          <height>1536</height>
+          <width>1280</width>
+          <height>960</height>
     </resolution>
-  </blackflys>
+  </bumblebee_xb3>
 </robot>
