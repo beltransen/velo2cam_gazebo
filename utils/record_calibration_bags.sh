@@ -21,7 +21,7 @@ do
 	MODALITY="$(basename "${sensor}")"
 	for experiment in $sensor/*;
 	do
-		if [[ $experiment == *$POSE_* ]]; then
+		if [[ $experiment == *$POSE\_* ]]; then
 			for n in ${NOISES[@]}; 
 			do 
 				if echo "$experiment" | grep -q "$n"; then
