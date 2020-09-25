@@ -20,11 +20,10 @@
   </include>
 
   <!-- Spawn calibration target position -->
-  <param name="target" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/calibration_whiteqr_pattern/calibration_whiteqr_spawn.urdf.xacro xyz:='2.0 0 2.' rpy:='0 0 -3.141591'"/>
+  <param name="target" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/calibration_whiteqr_pattern/calibration_whiteqr_spawn.urdf.xacro xyz:='2.0 0 1.5' rpy:='0 0 -3.141591'" />
   <node name="spawn_target_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param target -model target" respawn="false" output="screen" />
 
   <!-- Spawn sensor model -->
-  <param name="sensors" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/velodyne_VLP16/vlp16_spawn.urdf.xacro xyz:='0 0 2' rpy:='0 0 0' noise:='0' min_angle:='-90' max_angle:='90'" />
+  <param name="sensors" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/velodyne_HDL64/hdl64_spawn.urdf.xacro xyz:='-1.5 0.5 2.5' rpy:='0 0.2 0' noise:='0' min_angle:='-90' max_angle:='90'" />
   <node name="spawn_sensor_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param sensors -model sensors" respawn="false" output="screen" />
-
 </launch>

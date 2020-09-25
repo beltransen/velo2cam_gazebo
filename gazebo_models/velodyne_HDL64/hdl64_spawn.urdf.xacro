@@ -4,6 +4,9 @@
   <xacro:arg name="xyz" default="0 0 1.5" />
   <xacro:arg name="rpy" default="0 0 0" />
   <xacro:arg name="noise" default="0.008" />
+  <xacro:arg name="min_angle" default="-180" />
+  <xacro:arg name="max_angle" default="180" />
+  <xacro:arg name="azimuth" default="0.2" />
   <xacro:arg name="hz" default="1" />
   <xacro:arg name="lidar_name" default="hdl64" />
 
@@ -32,7 +35,8 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   
-  <hdl64 parent="base_footprint" name="$(arg lidar_name)" hz="$(arg hz)" noise="$(arg noise)">
+  <hdl64 parent="base_footprint" name="$(arg lidar_name)" hz="$(arg hz)" noise="$(arg noise)"
+    min_angle="$(arg min_angle)" max_angle="$(arg max_angle)" azimuth="$(arg azimuth)">
     <origin xyz="$(arg xyz)" rpy="$(arg rpy)"/>
   </hdl64>
 </robot>

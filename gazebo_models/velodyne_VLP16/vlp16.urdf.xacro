@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="vlp16">
-	<xacro:macro name="vlp16" params="parent name hz *origin noise:=0.008">
+	<xacro:macro name="vlp16" params="parent name hz *origin noise:=0.008 min_angle:=-180 max_angle:=180 azimuth:=0.2">
 	    <joint name="${name}_base_mount_joint" type="fixed">
 	      <xacro:insert_block name="origin" /> 
 	      <parent link="${parent}"/>
@@ -42,10 +42,10 @@
 	          <ray>
 	            <scan>
 	              <horizontal>
-	                <samples>1200</samples>
+	                <samples>${(max_angle-min_angle)/azimuth}</samples>
 	                <resolution>1</resolution>
-	                <min_angle>-3.14159</min_angle>
-	                <max_angle>3.14159</max_angle>
+	                <min_angle>${min_angle*3.14159/180}</min_angle>
+	                <max_angle>${max_angle*3.14159/180}</max_angle>
 	              </horizontal>
 	              <vertical>
 	                <samples>16</samples>

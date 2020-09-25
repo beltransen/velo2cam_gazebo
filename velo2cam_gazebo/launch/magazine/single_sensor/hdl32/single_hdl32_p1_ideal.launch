@@ -24,6 +24,6 @@
   <node name="spawn_target_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param target -model target" respawn="false" output="screen" />
 
   <!-- Spawn sensor model -->
-  <param name="sensors" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/velodyne_HDL32/hdl32_spawn.urdf.xacro xyz:='0 0 2' rpy:='0 0 0' noise:='0'" />
+  <param name="sensors" command="$(find xacro)/xacro $(find velo2cam_gazebo)/../gazebo_models/velodyne_HDL32/hdl32_spawn.urdf.xacro xyz:='0 0 2' rpy:='0 0 0' noise:='0' min_angle:='-90' max_angle:='90'" />
   <node name="spawn_sensor_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param sensors -model sensors" respawn="false" output="screen" />
 </launch>
