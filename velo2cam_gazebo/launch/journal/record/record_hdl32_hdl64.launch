@@ -1,0 +1,6 @@
+<launch>
+ <arg name="bag_name" default="hdl32"/>
+
+ <node pkg="rosbag" type="record" name="rosbag_record_gazebo"
+       args="/hdl32_points /hdl64_points -l 100 -O $(arg bag_name)" />
+</launch>

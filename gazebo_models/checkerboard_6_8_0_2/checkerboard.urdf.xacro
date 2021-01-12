@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="checkerboard_6_8_0_2">
+  <xacro:include filename="$(find velo2cam_gazebo)/../gazebo_models/checkerboard_6_8_0_2/materials.xacro"/>
+  <xacro:macro name="checkerboard_6_8_0_2" params="parent name *origin">
+   <!-- Base Link -->
+    <joint name="${name}_base_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" /> 
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+    </joint>
+    
+    <link name="${name}_link">
+      <inertial>
+        <mass value="0.1"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box size="1.2 1.6 0.0001"/>
+        </geometry>
+      </collision>
+      <visual name="checker_0_0">
+        <origin xyz="-0.5 -0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_0_1">
+        <origin xyz="-0.5 -0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="white"/>
+
+      </visual>
+      <visual name="checker_0_2">
+        <origin xyz="-0.5 -0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_0_3">
+        <origin xyz="-0.5 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_0_4">
+        <origin xyz="-0.5 0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_0_5">
+        <origin xyz="-0.5 0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_0_6">
+        <origin xyz="-0.5 0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_0_7">
+        <origin xyz="-0.5 0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_0">
+        <origin xyz="-0.3 -0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_1">
+        <origin xyz="-0.3 -0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_2">
+        <origin xyz="-0.3 -0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_3">
+        <origin xyz="-0.3 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_4">
+        <origin xyz="-0.3 0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_5">
+        <origin xyz="-0.3 0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_6">
+        <origin xyz="-0.3 0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_1_7">
+        <origin xyz="-0.3 0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_0">
+        <origin xyz="-0.1 -0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_1">
+        <origin xyz="-0.1 -0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_2">
+        <origin xyz="-0.1 -0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_3">
+        <origin xyz="-0.1 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_4">
+        <origin xyz="-0.1 0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_5">
+        <origin xyz="-0.1 0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_6">
+        <origin xyz="-0.1 0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_2_7">
+        <origin xyz="-0.1 0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_0">
+        <origin xyz="0.1 -0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_1">
+        <origin xyz="0.1 -0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_2">
+        <origin xyz="0.1 -0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_3">
+        <origin xyz="0.1 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_4">
+        <origin xyz="0.1 0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_5">
+        <origin xyz="0.1 0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_6">
+        <origin xyz="0.1 0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_3_7">
+        <origin xyz="0.1 0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_0">
+        <origin xyz="0.3 -0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_1">
+        <origin xyz="0.3 -0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_2">
+        <origin xyz="0.3 -0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_3">
+        <origin xyz="0.3 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_4">
+        <origin xyz="0.3 0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_5">
+        <origin xyz="0.3 0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_6">
+        <origin xyz="0.3 0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_4_7">
+        <origin xyz="0.3 0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_0">
+        <origin xyz="0.5 -0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_1">
+        <origin xyz="0.5 -0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_2">
+        <origin xyz="0.5 -0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_3">
+        <origin xyz="0.5 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_4">
+        <origin xyz="0.5 0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_5">
+        <origin xyz="0.5 0.3 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_6">
+        <origin xyz="0.5 0.5 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="1 1 1 1"/>
+				</material>
+
+      </visual>
+      <visual name="checker_5_7">
+        <origin xyz="0.5 0.7 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.0002" />
+        </geometry>
+        <material name="">
+					<color rgba="0 0 0 1"/>
+				</material>
+
+      </visual>
+    </link>
+    <gazebo reference="${name}_link">
+      <static>true</static>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,7 @@
+<launch>
+ <arg name="bag_name" default="hdl32"/>
+
+ <node pkg="rosbag" type="record" name="rosbag_record_gazebo"
+       args="/blackflys/image_raw /blackflys/camera_info
+       /hdl64_points -l 5 -O $(arg bag_name)" />
+</launch>

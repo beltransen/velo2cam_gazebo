@@ -33,7 +33,7 @@ do
 						continue
 					fi
 					roslaunch $experiment &
-					sleep 30
+					sleep 60
 					for i in $(seq 0 $(expr $BAGCOUNT - 1)); 
 					do
 						BAGNAME="$(basename -s .launch "${experiment}")"_$i
@@ -42,7 +42,7 @@ do
 						fi
 					done
 					killall roslaunch
-					sleep 30
+					sleep 20
 				fi
 			done
 		fi

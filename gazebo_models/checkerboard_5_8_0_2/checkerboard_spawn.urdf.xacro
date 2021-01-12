@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="checkerboard_spawn">
+  <xacro:include filename="$(find velo2cam_gazebo)/../gazebo_models/checkerboard_5_8_0_2/checkerboard.urdf.xacro"/>
+  <xacro:arg name="xyz" default="0 0 1.5" />
+  <xacro:arg name="rpy" default="0 0 0" />
+  <xacro:arg name="name" default="checkerboard" />
+
+  <gazebo>
+      <static>true</static>
+  </gazebo>
+  <!-- Base Footprint -->
+  <link name="base_footprint">
+    <inertial>
+      <mass value="0.0001" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0"
+          iyy="0.0001" iyz="0.0" 
+          izz="0.0001" />
+    </inertial>
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <static>true</static>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  
+  <checkerboard_6_8_0_2 parent="base_footprint" name="$(arg name)">
+    <origin xyz="$(arg xyz)" rpy="$(arg rpy)"/>
+  </checkerboard_6_8_0_2>
+</robot>
