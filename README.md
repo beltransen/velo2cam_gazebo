@@ -34,7 +34,7 @@ Calibration targets:
 ## Citation
 If you use this work in your research, please consider citing the following papers:
 
-[1] Beltrán, J., Guindel, C., and García, F. (2021). [Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups](https://arxiv.org/abs/2101.04431). arXiv:2101.04431 [cs.CV]. Submitted to IEEE Transactions on Intelligent Transportation Systems. [Preferred citation]
+[1] Beltrán, J., Guindel, C., and García, F. (2021). [Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups](https://arxiv.org/abs/2101.04431). arXiv:2101.04431 [cs.RO]. Submitted to IEEE Transactions on Intelligent Transportation Systems. [Preferred citation]
 
 [2] Guindel, C., Beltrán, J., Martín, D., and García, F. (2017).  Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups. *IEEE International Conference on Intelligent Transportation Systems (ITSC), 674–679*. Pre-print available [here](https://arxiv.org/abs/1705.04085).
 
