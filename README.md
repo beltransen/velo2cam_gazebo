@@ -1,4 +1,4 @@
-# velo2cam_gazebo [![Build Status](http://build.ros.org/buildStatus/icon?job=Kdev__velo2cam_calibration__ubuntu_xenial_amd64)](http://build.ros.org/view/Kdev/job/Kdev__velo2cam_calibration__ubuntu_xenial_amd64)
+# velo2cam_gazebo
 Repository including Gazebo models, plugins and worlds to test algorithms for extrinsic calibration of lidar-camera pairs. Package developed at [Intelligent Systems Laboratory](http://www.uc3m.es/islab), Universidad Carlos III de Madrid.
 
 ![gazebo screenshot](screenshots/velo2cam_calibration_setup.png)
@@ -34,9 +34,7 @@ Calibration targets:
 ## Citation
 If you use this work in your research, please consider citing the following papers:
 
-[1] Beltrán, J., Guindel, C., and García, F. (2021). [Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups](https://arxiv.org/abs/1705.04085). arXiv:1705.04085 [cs.CV]. Submitted to IEEE Transactions on Intelligent Transportation Systems. [Preferred citation]
+[1] Beltrán, J., Guindel, C., and García, F. (2021). [Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups](https://arxiv.org/abs/2101.04431). arXiv:1705.04085 [cs.CV]. Submitted to IEEE Transactions on Intelligent Transportation Systems. [Preferred citation]
 
-[2] Guindel, C., Beltrán, J., Martín, D., and García, F. (2017).  Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups. *IEEE International Conference on Intelligent Transportation Systems (ITSC), 674–679*.
-
-Pre-print available [here](https://arxiv.org/abs/1705.04085).
+[2] Guindel, C., Beltrán, J., Martín, D., and García, F. (2017).  Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups. *IEEE International Conference on Intelligent Transportation Systems (ITSC), 674–679*. Pre-print available [here](https://arxiv.org/abs/1705.04085).
 
