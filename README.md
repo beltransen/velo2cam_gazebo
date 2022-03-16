@@ -1,5 +1,10 @@
 # velo2cam_gazebo
-Repository including Gazebo models, plugins and worlds to test algorithms for extrinsic calibration of lidar-camera pairs. Package developed at [Intelligent Systems Laboratory](http://www.uc3m.es/islab), Universidad Carlos III de Madrid.
+Repository including Gazebo models, plugins and worlds to test algorithms for extrinsic calibration of pair of sensors composed of LiDAR and camera devices in any possible combination, as described in this paper:
+
+**Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups**  
+[Jorge Beltrán](https://beltransen.github.io/), [Carlos Guindel](https://cguindel.github.io/), Arturo de la Escalera, Fernando García  
+IEEE Transactions on Intelligent Transportation Systems, 2022  
+**\[[Paper](https://ieeexplore.ieee.org/abstract/document/9733276)\] \[[Preprint](https://arxiv.org/abs/2101.04431)\]**
 
 ![gazebo screenshot](screenshots/velo2cam_calibration_setup.png)
 
@@ -31,10 +36,17 @@ Calibration targets:
 * Launch files for all calibrations scenarios used in the related published manuscripts are included. To launch a sample scenario, run:
 	```roslaunch velo2cam_gazebo mono_hdl64_p1_real.launch```
 
-## Citation
-If you use this work in your research, please consider citing the following papers:
+## Citation ##
+If you use this work in your research, please consider citing the following paper:
 
-[1] Beltrán, J., Guindel, C., and García, F. (2021). [Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups](https://arxiv.org/abs/2101.04431). arXiv:2101.04431 [cs.RO]. Submitted to IEEE Transactions on Intelligent Transportation Systems. [Preferred citation]
+```
+@article{beltran2022,  
+  author={Beltrán, Jorge and Guindel, Carlos and de la Escalera, Arturo and García, Fernando},  
+  journal={IEEE Transactions on Intelligent Transportation Systems},   
+  title={Automatic Extrinsic Calibration Method for LiDAR and Camera Sensor Setups},   
+  year={2022}, 
+  doi={10.1109/TITS.2022.3155228}
+}
+```
 
-[2] Guindel, C., Beltrán, J., Martín, D., and García, F. (2017).  Automatic Extrinsic Calibration for Lidar-Stereo Vehicle Sensor Setups. *IEEE International Conference on Intelligent Transportation Systems (ITSC), 674–679*. Pre-print available [here](https://arxiv.org/abs/1705.04085).
-
+A previous version of this tool is available [here](https://github.com/beltransen/velo2cam_calibration/tree/v1.0) and was described on this [paper](https://doi.org/10.1109/ITSC.2017.8317829). 
